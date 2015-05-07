@@ -1,0 +1,142 @@
+/*load in custom fonts*/
+
+@font-face {
+  font-family: Univers-TextType;
+  src: url('fonts/UniversLTStd.otf');
+}
+
+@font-face {
+  font-family: Univers-CondensedBold;
+  src: url('fonts/UniversLTStd-BoldCn.otf');
+}
+
+@font-face {
+  font-family: Univers-Condensed;
+  src: url('fonts/UniversLTStd-Cn.otf');
+}
+
+/*------- BODY AND BACKGROUND STYLING -------*/
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Univers-TextType;
+}
+
+#background-image {
+  width: 100%;
+  height: 100%;
+}
+
+#background-image img {
+  width: 100%;
+  min-width: 1000px;
+  height: 1000px;
+}
+
+/*------- TOP NAVIGATION BAR -------*/
+
+#firstSection img {
+  position: fixed;
+  font-family: Univers-Condensed;
+  font-size: 1.1em;
+  top: 0;
+  width: 100%;
+  height: 2.5em;
+  background-color: rgba(0,0,0,.3);
+}
+
+#wrapperToCenter {
+/* Change this to the min value to fit the menu */
+  width: 630px;
+  margin: auto;
+}
+
+nav ul {
+  margin: auto;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  padding: 0;
+  text-decoration: none;
+}
+
+nav ul li:first-child {
+	margin-left: 0em;
+	color: blue;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 2em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+	/* I want to handle this with Javascript */
+	color: black; 
+}
+
+main {
+  position: fixed;
+  /*left: 30vw; /* (100 - width / 2) for centered*/
+  top: 15vh; /* (100 - height / 4) for centered*/
+  width: 40vw;
+  min-width: 400px;
+  height: 40vw;
+  min-height: 400px;
+  background-color: rgba(255,255,255, .0);
+  overflow: hidden;
+}
+
+.scroll {
+    position:relative;
+}
+
+ img {
+	width = 100px;
+	height = 100px;
+}
+
+.hidden
+{
+  visibility: hidden;
+}
+
+/*------- STYLING -------*/
+
+/* Headings */
+h1
+{
+  font-family: Univers-Condensed;
+  font-size: 30pt;
+}
+
+h2
+{
+  font-family: Univers-CondensedBold;
+  font-size: 25pt;
+}
+
+h3
+{
+  font-family: Univers-CondensedBold;
+  font-size: 20pt;
+}
+
+/* Hyperlinks */
+
+a
+{
+  text-decoration: none;
+  /* what */
+  color: maroon;
+}
+
+a:hover
+{
+  color: white;
+}
