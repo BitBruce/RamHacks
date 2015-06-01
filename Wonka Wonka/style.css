@@ -26,48 +26,85 @@
 
 #sectionOne { /* Main */
 	background       : white url("img/bg-EngineeringBld.jpg") no-repeat center top;
-	background-size  : 100% 100%;
+	background-size  : cover;
 }
 
 #sectionOne #content {
-	background       : -webkit-linear-gradient(left,rgba(0,0,0,0.3),rgba(255,0,0,0)); /*Safari 5.1-6*/
-	background       : -o-linear-gradient(right,rgba(0,0,0,0.3),rgba(255,0,0,0)); /*Opera 11.1-12*/
-	background       : -moz-linear-gradient(right,rgba(0,0,0,0.3),rgba(255,0,0,0)); /*Fx 3.6-15*/
-	background       : linear-gradient(to right, rgba(0,0,0,0.3), rgba(255,0,0,0)); /*Standard*/
-	 
+   background       : rgba( 41, 41, 41, .4 );
+   border           : 2px solid white;
 	border-radius    : 5px;
-	height           : 25vh;
+   box-shadow       : 2px 2px 3px rgb( 61, 61, 61 );
+	height           : 31vh;
 	margin           : auto; /* centers the stuff horz */
+   min-width        : 600px;
 	padding          : 10px;
 	position         : absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-	width            : 120vh;
-
-
+	top: 0; left: 0; bottom: 90; right: 0;
+	width            : 60vw;
 }
 
 #sectionOne #content img {
-	height           : 25vh;
+   height           : 25vh;
 	width            : 40vh;
 	border-right     : 2px solid white;
-	padding-right    : 4vh;
+	padding-right    : 2vw;
 }
 
 #sectionOne #content #sectionOneParticles {
 	/* TODO: setup particles here. */
 }
 
+#sectionOne #content p {
+   font-size        : 1.5em;
+   margin-left      : auto;
+   margin-right     : auto;
+   margin-top       : 3vh;
+   text-shadow      : 2px 2px 5px rgb( 41, 41, 41 );
+   text-align       : center;
+}
+
 #sectionTwo { /* Schedule */
-	background       : white url("img/bg-1.jpg") no-repeat center top;
+	background       : green url("img/bg-1.jpg") no-repeat center top;
 	background-size  : 100% 100%;
+   text-shadow      : 2px 2px 5px rgb( 41, 41, 41 );
 }
 
 #sectionTwo #content { 
-	margin           : auto; /* centers the stuff horz */
+	margin-bottom    : 10vh;
+	margin-left      : 10vw;
+	margin-right     : 10vw;
+	margin-top       : 10vh; 
+   overflow         : hidden;
 	position         : absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 }
  
+#sectionTwoHeader {
+   border-bottom    : 1px solid white;
+   box-shadow       : 1px 1px 5px rgb( 41, 41, 41 );
+   font-size        : 3em;
+   margin-bottom    : 5vh;
+   text-align       : center;
+}
+
+#schedule {
+   padding          : 1vh;
+}
+
+#scheduleHeader {
+   text-align       : center;
+}
+
+#scheduleSaturday {
+   background       : rgba( 41, 41, 41, 0.4 );
+   margin-left      : auto;
+   margin-right     : 10vw;
+}
+
+#scheduleSunday {
+   background       : rgba( 41, 41, 41, 0.4 );
+}
+
 #sectionThree { /* Hackathon */
 	background       : white url("img/bg-2.jpg") no-repeat center top;
 	background-size  : 100% 100%;
@@ -94,25 +131,33 @@
 #sectionFive { /* Sponsors */
 	background       : white url("img/bg-4.jpg") no-repeat center top;
 	background-size  : 100% 100%;
-	margin           : 0 auto;
+}
+
+#particles-js {
+	background-image : url(particles-js/);
+	background-size  : 100% 100%;
+	background-repeat: no-repeat;
+   z-index          : 10;
 }
 
 #sectionFive #content {
 	margin           : 0 auto;
 }
 
-#sectionFive #gold img {
-	background       : rgba( 0, 0, 0, .4 );
+#sectionFive * img {
+	background       : rgba( 0, 0, 0, 1 );
+	border           : 3px solid white;
 	border-radius    : 100%;
+	box-shadow       : 1px 1px 5px #000000;
 	padding          : 1vh;
+}
+
+#sectionFive #gold img {
 	width            : 50vh;
 	height           : 50vh;
 }
 
 #sectionFive #silver img {
-	background       : rgba( 0, 0, 0, .4 );
-	border-radius    : 100%;
-	padding          : 1vh;
 	width            : 25vh;
 	height           : 25vh;
 }
@@ -125,7 +170,8 @@
 /*------- TOP NAVIGATION BAR -------*/
 
 nav {
-  background-color  : rgba( 0, 0, 0, .4 );
+  background-color  : rgba( 41, 41, 41, .4 );
+  border-bottom     : 1px solid black;
   display           : block; 
   font-family       : Univers-Condensed, sans-serif;
   font-size         : 1.4em;
@@ -139,7 +185,7 @@ nav {
 
 nav ul {
 	margin           : auto;
-	margin-top       : 0.3em;
+	margin-top       : 0.5em;
 	text-align       : center;
 	text-decoration  : none;
 	padding          : 0;
@@ -148,6 +194,7 @@ nav ul {
 nav ul li {
 	border-left      : 1px solid white;
 	display          : inline;
+   padding-top      : 0.1em;
 	padding-left     : 1em;
 	padding-right    : 1em;
 }
