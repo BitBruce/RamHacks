@@ -168,14 +168,22 @@ section {
 
 #sectionThree {
    .content {
-      font-size        : 2vw;
+      font-size        : 2.5vh;
 	   margin-bottom    : 10vh;
 	   margin-left      : 10vw;
 	   margin-right     : 10vw;
 	   margin-top       : 10vh; 
       overflow         : hidden;
 
+      @include materialShadow(3);
+
       /*border: 1px dashed blue;*/
+
+      p {
+         font-size    : 2.0vh;
+         padding-left : 3vw;
+         @include materialShadow(1);
+      }
    }
 }
 
