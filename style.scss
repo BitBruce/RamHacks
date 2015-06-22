@@ -1,0 +1,256 @@
+/*load in custom fonts*/
+
+@font-face {
+  font-family       : Univers-TextType;
+  src               : url('fonts/UniversLTStd.otf');
+}
+
+@font-face {
+  font-family       : Univers-CondensedBold;
+  src               : url('fonts/UniversLTStd-BoldCn.otf');
+}
+
+@font-face {
+  font-family       : Univers-Condensed;
+  src               : url('fonts/UniversLTStd-Cn.otf');
+}
+
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
+@mixin materialShadow($depth) {
+  @if $depth < 1 {
+    text-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+  } @else {
+    text-shadow: bottom-shadow($depth), top-shadow($depth);  
+  }
+}
+
+section {
+	height           : 100vh;
+	/*min-width        : 1000px;*/
+   overflow         : hidden;
+	position         : relative;
+   /*text-shadow      : 2px 2px 5px rgb( 41, 41, 41 );*/
+}
+
+.sectionHeader {
+   border-bottom    : 1px solid white;
+   font-size        : 3.5vw;
+   font-weight      : normal;
+   margin-bottom    : 5vh;
+   text-align       : center;
+
+   @include materialShadow(2);
+   /*border           : 1px dashed blue; */
+}
+
+.content {
+   /*border           : 1px dashed red; */
+}
+
+@each $i in One, Two, Three, Four, Five {
+   #section#{$i} {
+	   background       : white url("img/bg-sec#{$i}-shadow.jpg") no-repeat center bottom;
+	   background-size  : cover;
+   }
+}
+
+#sectionOne {
+
+   img {
+	   border-right  : 2px solid white;
+      display       : inline;
+	   padding-right : 2vw;
+	   width         : 18vw;
+   }
+   
+   .content {
+      font-size  : 5vw;
+	   margin     : auto;
+      margin-top : 35vh;
+	   width      : 60vw;
+
+      p {
+         display    : inline;
+         font-size  : 1.5em;
+         position   : relative;
+         text-align : center;
+         top        : -3.3vw;
+         width      : 40vw;
+           
+         @include materialShadow(4);
+      }
+
+      #date {
+         display    : block;
+         font-size  : .5em;
+         margin     : auto;
+         top        : 0vh;
+         width      : 60vw;
+           
+         @include materialShadow(2);
+      }
+   }
+}
+
+#sectionTwo {
+   .content { 
+      font-size        : 2vw;
+	   margin-bottom    : 10vh;
+	   margin-left      : 10vw;
+	   margin-right     : 10vw;
+	   margin-top       : 10vh; 
+      overflow         : hidden;
+
+      /*border: 1px dashed blue;*/
+   }
+
+   .event {
+      padding-left     : 3vw;
+   }
+
+   #scheduleSaturday {
+      display          : inline;
+      float            : left;
+      margin-left      : 5vw;
+   
+      /*border: 1px dashed green;*/
+   }
+
+   #scheduleSunday {
+      display          : inline;
+      float            : right;
+      margin-right     : 5vw;
+   
+      /*border: 1px dashed yellow;*/
+   }
+}
+
+#sectionThree {
+   .content {
+      font-size        : 2vw;
+	   margin-bottom    : 10vh;
+	   margin-left      : 10vw;
+	   margin-right     : 10vw;
+	   margin-top       : 10vh; 
+      overflow         : hidden;
+
+      /*border: 1px dashed blue;*/
+   }
+}
+
+#sectionFour {
+   .content {
+      font-size        : 2vw;
+	   margin-bottom    : 10vh;
+	   margin-left      : 10vw;
+	   margin-right     : 10vw;
+	   margin-top       : 10vh; 
+      overflow         : hidden;
+   
+      /*border: 1px dashed blue;*/
+   }
+}
+
+#sectionFive {
+   .content {
+	   margin           : 0 auto;
+   }
+}
+
+nav {
+   background-color  : rgba( 0, 0, 0, .4 );
+   border-bottom     : 1px solid black;
+   display           : block; 
+   font-family       : Univers-Condensed, sans-serif;
+   font-size         : 1.4em;
+   height            : 2em;
+   margin            : auto;
+   min-width         : 700px;
+   position          : fixed;
+   top               : 0;
+   width             : 100%;
+
+   ul {
+      margin           : auto;
+      margin-top       : 0.5em; 
+      text-align       : center; 
+      text-decoration  : none; 
+      padding          : 0; 
+   }
+
+   li {
+	   border-left      : 1px solid white;
+	   display          : inline;
+      padding-top      : 0.1em;
+	   padding-left     : 1em;
+	   padding-right    : 1em;
+   }
+
+   li:first-child {
+	   border-left      : 0vw solid white;
+	   margin-left      : 0vw;
+	   padding-left     : 0vw;
+   }
+
+   a {
+	   color             : white;
+	   text-decoration   : none;
+   }
+
+   a:hover {
+	   color            : rgb( 41, 41, 41 );
+   }
+}
+
+html {
+	font-family      : Univers-TextType;
+	color            : white;
+}
+
+body {
+  height            : 500vh;
+  margin            : 0;
+  padding           : 0;
+  background        : white; 
+}

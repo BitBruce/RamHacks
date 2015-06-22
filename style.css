@@ -17,167 +17,151 @@
 
 /*------- BODY AND BACKGROUND STYLING -------*/
 
-.section {
-	height           : 20%;
-	min-width        : 1000px;
-	overflow         : hidden;
+section {
+	height           : 100vh;
+	/*min-width        : 1000px;*/
+   overflow         : hidden;
 	position         : relative;
+   text-shadow      : 2px 2px 5px rgb( 41, 41, 41 );
 }
 
-#sectionOne { /* Main */
-	background       : white url("img/bg-EngineeringBld.jpg") no-repeat center top;
+.sectionHeader {
+   border-bottom    : 1px solid white;
+   font-size        : 4.5vw;
+   font-weight      : normal;
+   margin-bottom    : 5vh;
+   text-align       : center;
+
+   /*border           : 1px dashed blue; */
+}
+
+.content {
+   /*border           : 1px dashed red; */
+}
+
+#sectionOne {
+	background       : white url("img/bg-secOne.jpg") no-repeat center top;
 	background-size  : cover;
 }
 
-#sectionOne #content {
-   background       : rgba( 41, 41, 41, .4 );
-   border           : 2px solid white;
-	border-radius    : 5px;
-   box-shadow       : 2px 2px 3px rgb( 61, 61, 61 );
-	height           : 31vh;
+#sectionOne .content {
+   font-size        : 5vw;
 	margin           : auto; /* centers the stuff horz */
-   min-width        : 600px;
-	padding          : 10px;
-	position         : absolute;
-	top: 0; left: 0; bottom: 90; right: 0;
+   margin-top       : 35vh;
 	width            : 60vw;
 }
 
-#sectionOne #content img {
-   height           : 25vh;
-	width            : 40vh;
+#sectionOne .content * {
+   display          : inline;
+}
+
+#sectionOne img {
 	border-right     : 2px solid white;
 	padding-right    : 2vw;
+	width            : 18vw;
+
+   /*border:2px dashed yellow;*/
 }
 
-#sectionOne #content #sectionOneParticles {
-	/* TODO: setup particles here. */
-}
-
-#sectionOne #content p {
+#sectionOne .content p {
    font-size        : 1.5em;
-   margin-left      : auto;
-   margin-right     : auto;
-   margin-top       : 3vh;
-   text-shadow      : 2px 2px 5px rgb( 41, 41, 41 );
+   position         : relative;
    text-align       : center;
+   top              : -3.5vw;
+   vertical-align   : middle;
+   width            : 40vw;
+
+   /*border:1px dashed red;*/
 }
 
 #sectionTwo { /* Schedule */
-	background       : green url("img/bg-1.jpg") no-repeat center top;
-	background-size  : 100% 100%;
-   text-shadow      : 2px 2px 5px rgb( 41, 41, 41 );
+	background       : white url("img/bg-secTwo.jpg") no-repeat center bottom;
+	background-size  : cover;
 }
 
-#sectionTwo #content { 
+#sectionTwo .content { 
+   font-size        : 2vw;
 	margin-bottom    : 10vh;
 	margin-left      : 10vw;
 	margin-right     : 10vw;
 	margin-top       : 10vh; 
    overflow         : hidden;
-	position         : absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
+
+   /*border: 1px dashed blue;*/
 }
  
-#sectionTwoHeader {
-   border-bottom    : 1px solid white;
-   box-shadow       : 1px 1px 5px rgb( 41, 41, 41 );
-   font-size        : 3em;
-   margin-bottom    : 5vh;
-   text-align       : center;
-}
-
-#schedule {
-   padding          : 1vh;
-}
-
-#scheduleHeader {
-   text-align       : center;
+#sectionTwo .event {
+   padding-left     : 3vw;
 }
 
 #scheduleSaturday {
-   background       : rgba( 41, 41, 41, 0.4 );
-   margin-left      : auto;
-   margin-right     : 10vw;
+   display          : inline;
+   float            : left;
+   margin-left      : 5vw;
+
+   /*border: 1px dashed green;*/
 }
 
 #scheduleSunday {
-   background       : rgba( 41, 41, 41, 0.4 );
+   display          : inline;
+   float            : right;
+   margin-right     : 5vw;
+
+   /*border: 1px dashed yellow;*/
 }
 
 #sectionThree { /* Hackathon */
-	background       : white url("img/bg-2.jpg") no-repeat center top;
-	background-size  : 100% 100%;
+	background       : white url("img/bg-secThree.jpg") no-repeat center top;
+	background-size  : cover;
 }
 
-#sectionThree #content {
-	margin           : auto;
-	margin-left      : 15%;
-	margin-top       : 6.5em;
+#sectionThree .content {
+   font-size        : 2vw;
+	margin-bottom    : 10vh;
+	margin-left      : 10vw;
+	margin-right     : 10vw;
+	margin-top       : 10vh; 
+   overflow         : hidden;
+
+   /*border: 1px dashed blue;*/
 }
  
 #sectionFour {
-	background       : white url("img/bg-3.jpg") no-repeat center top;
-	background-size  : 100% 100%;
+	background       : white url("img/bg-secFour.jpg") no-repeat center top;
+	background-size  : cover;
 }
 
-#sectionFour #content {
-	margin           : auto; /* centers the stuff horz */
-	margin-left      : 15%;
-	margin-top       : 6.5em;
-	text-shadow      : 0px 0px 6px #000000;
+#sectionFour .content {
+   font-size        : 2vw;
+	margin-bottom    : 10vh;
+	margin-left      : 10vw;
+	margin-right     : 10vw;
+	margin-top       : 10vh; 
+   overflow         : hidden;
+
+   /*border: 1px dashed blue;*/
 }
- 
+
 #sectionFive { /* Sponsors */
-	background       : white url("img/bg-4.jpg") no-repeat center top;
-	background-size  : 100% 100%;
+	background       : white url("img/bg-secFive.jpg") no-repeat center bottom;
+	background-size  : cover;
 }
 
-#particles-js {
-	background-image : url(particles-js/);
-	background-size  : 100% 100%;
-	background-repeat: no-repeat;
-   z-index          : 10;
-}
-
-#sectionFive #content {
+#sectionFive .content {
 	margin           : 0 auto;
-}
-
-#sectionFive * img {
-	background       : rgba( 0, 0, 0, 1 );
-	border           : 3px solid white;
-	border-radius    : 100%;
-	box-shadow       : 1px 1px 5px #000000;
-	padding          : 1vh;
-}
-
-#sectionFive #gold img {
-	width            : 50vh;
-	height           : 50vh;
-}
-
-#sectionFive #silver img {
-	width            : 25vh;
-	height           : 25vh;
-}
-
-#sectionFive #bronze img {
-	width            : 8vh;
-	height           : 8vh;
 }
 
 /*------- TOP NAVIGATION BAR -------*/
 
 nav {
-  background-color  : rgba( 41, 41, 41, .4 );
+  background-color  : rgba( 0, 0, 0, .4 );
   border-bottom     : 1px solid black;
   display           : block; 
   font-family       : Univers-Condensed, sans-serif;
   font-size         : 1.4em;
   height            : 2em;
   margin            : auto;
-  min-width         : 1000px;
+  min-width         : 700px;
   position          : fixed;
   top               : 0;
   width             : 100%;
@@ -200,9 +184,9 @@ nav ul li {
 }
 
 nav ul li:first-child {
-	border-left      : 0px solid white;
-	margin-left      : 0em;
-	padding-left     : 0px;
+	border-left      : 0vw solid white;
+	margin-left      : 0vw;
+	padding-left     : 0vw;
 }
 
 nav ul li a {
@@ -211,7 +195,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-	color            : black; 
+	color            : rgb( 41, 41, 41 );
 }
 
 /* End nav bar */
@@ -222,11 +206,8 @@ html {
 }
 
 body {
+  height            : 500vh;
   margin            : 0;
   padding           : 0;
   background        : white; 
-}
-
-main {
-	height           : 500vh;
 }
