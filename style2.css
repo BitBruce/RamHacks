@@ -1,0 +1,189 @@
+/*load in custom fonts*/
+@font-face {
+  font-family: Univers-TextType;
+  src: url("fonts/UniversLTStd.otf"); }
+@font-face {
+  font-family: Univers-CondensedBold;
+  src: url("fonts/UniversLTStd-BoldCn.otf"); }
+@font-face {
+  font-family: Univers-Condensed;
+  src: url("fonts/UniversLTStd-Cn.otf"); }
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
+section {
+  height: 100vh;
+  /*min-width        : 1000px;*/
+  overflow: hidden;
+  position: relative;
+  /*text-shadow      : 2px 2px 5px rgb( 41, 41, 41 );*/ }
+
+.sectionHeader {
+  border-bottom: 1px solid white;
+  font-size: 3.5vw;
+  font-weight: normal;
+  margin-bottom: 5vh;
+  text-align: center;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  /*border           : 1px dashed blue; */ }
+
+.content {
+  /*border           : 1px dashed red; */ }
+
+#sectionOne {
+  background: white url("img/bg-secOne-shadow.jpg") no-repeat center bottom;
+  background-size: cover; }
+
+#sectionTwo {
+  background: white url("img/bg-secTwo-shadow.jpg") no-repeat center bottom;
+  background-size: cover; }
+
+#sectionThree {
+  background: white url("img/bg-secThree-shadow.jpg") no-repeat center bottom;
+  background-size: cover; }
+
+#sectionFour {
+  background: white url("img/bg-secFour-shadow.jpg") no-repeat center bottom;
+  background-size: cover; }
+
+#sectionFive {
+  background: white url("img/bg-secFive-shadow.jpg") no-repeat center bottom;
+  background-size: cover; }
+
+#sectionOne img {
+  border-right: 2px solid white;
+  display: inline;
+  padding-right: 2vw;
+  width: 18vw; }
+#sectionOne .content {
+  font-size: 5vw;
+  margin: auto;
+  margin-top: 35vh;
+  width: 60vw; }
+  #sectionOne .content p {
+    display: inline;
+    font-size: 1.5em;
+    position: relative;
+    text-align: center;
+    top: -3.3vw;
+    width: 40vw;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25); }
+  #sectionOne .content #date {
+    display: block;
+    font-size: .5em;
+    margin: auto;
+    top: 0vh;
+    width: 60vw;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+
+#sectionTwo .content {
+  font-size: 2vw;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 10vh;
+  overflow: hidden;
+  /*border: 1px dashed blue;*/ }
+#sectionTwo .event {
+  padding-left: 3vw; }
+#sectionTwo #scheduleSaturday {
+  display: inline;
+  float: left;
+  margin-left: 5vw;
+  /*border: 1px dashed green;*/ }
+#sectionTwo #scheduleSunday {
+  display: inline;
+  float: right;
+  margin-right: 5vw;
+  /*border: 1px dashed yellow;*/ }
+
+#sectionThree .content {
+  font-size: 2.5vh;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 10vh;
+  overflow: hidden;
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  /*border: 1px dashed blue;*/ }
+  #sectionThree .content p {
+    font-size: 2.0vh;
+    padding-left: 3vw;
+    text-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+
+#sectionFour .content {
+  font-size: 2vw;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 10vh;
+  overflow: hidden;
+  /*border: 1px dashed blue;*/ }
+
+#sectionFive .content {
+  margin: 0 auto; }
+
+nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid black;
+  display: block;
+  font-family: Univers-Condensed, sans-serif;
+  font-size: 1.4em;
+  height: 2em;
+  margin: auto;
+  min-width: 700px;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  nav ul {
+    margin: auto;
+    margin-top: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    padding: 0; }
+  nav li {
+    border-left: 1px solid white;
+    display: inline;
+    padding-top: 0.1em;
+    padding-left: 1em;
+    padding-right: 1em; }
+  nav li:first-child {
+    border-left: 0vw solid white;
+    margin-left: 0vw;
+    padding-left: 0vw; }
+  nav a {
+    color: white;
+    text-decoration: none; }
+  nav a:hover {
+    color: #292929; }
+
+html {
+  font-family: Univers-TextType;
+  color: white; }
+
+body {
+  height: 500vh;
+  margin: 0;
+  padding: 0;
+  background: white; }
